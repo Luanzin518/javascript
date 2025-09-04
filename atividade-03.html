@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atividade Antes e Depois</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Atividade Antes e Depois</h1>
+  <button id="btnNumber">Digite um número</button>
+
+  <script>
+    document.getElementById('btnNumber').addEventListener('click', () => {
+      const input = prompt('Digite um número inteiro qualquer:');
+      if (input === null) return; // Cancelou
+      const num = parseInt(input.trim(), 10);
+      if (isNaN(num)) {
+        alert('Por favor, digite um número inteiro válido.');
+        return;
+      }
+      const antecessor = num - 1;
+      const sucessor = num + 1;
+      alert(`O antecessor de ${num} é ${antecessor} e o sucessor é ${sucessor}.`);
+    });
+  </script>
+</body>
+</html>
