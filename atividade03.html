@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atividade: Verificação de Maioridade</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ccc;
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 300px;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Atividade: Verificação de Maioridade</h1>
+        <button onclick="verificarMaioridade()">Inserir idade</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function verificarMaioridade() {
+            const idadeStr = prompt("Digite sua idade:");
+            const resultadoDiv = document.getElementById("resultado");
+            const idade = parseInt(idadeStr, 10);
+
+            if (!isNaN(idade) && idade > 0) {
+                if (idade >= 18) {
+                    resultadoDiv.textContent = "Você é maior de idade.";
+                } else {
+                    resultadoDiv.textContent = "Você é menor de idade.";
+                }
+            } else {
+                resultadoDiv.textContent = "Idade inválida. Por favor, tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>

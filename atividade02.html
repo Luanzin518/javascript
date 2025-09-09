@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atividade: Contador de Cliques</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ccc;
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 300px;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        #contador {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Atividade: Contador de Cliques</h1>
+        <button onclick="incrementarContador()">Clique aqui</button>
+        <div id="contador">Cliques: 0</div>
+    </div>
+
+    <script>
+        let contador = 0;
+        function incrementarContador() {
+            contador++;
+            document.getElementById("contador").textContent = `Cliques: ${contador}`;
+        }
+    </script>
+</body>
+</html>

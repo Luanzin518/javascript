@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atividade: Saudação</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ccc;
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 300px;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        #mensagem {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Atividade: Saudação</h1>
+        <button onclick="saudarUsuario()">Inserir nome</button>
+        <div id="mensagem"></div>
+    </div>
+
+    <script>
+        function saudarUsuario() {
+            const nome = prompt("Digite seu nome:");
+            const mensagemDiv = document.getElementById("mensagem");
+            if (nome && nome.trim() !== "") {
+                mensagemDiv.textContent = `Olá, ${nome.trim()}! Seja bem-vindo(a) ao nosso site.`;
+            } else {
+                mensagemDiv.textContent = "Nome inválido. Por favor, tente novamente.";
+            }
+        }
+    </script>
+</body>
+</html>
